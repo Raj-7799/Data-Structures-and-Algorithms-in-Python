@@ -31,7 +31,7 @@ class Heap:
         if leftChild < self.size and self.heap[leftChild][0] > self.heap[index][0]:
             self.swap(leftChild, index)
             self.heapifyDown(leftChild)
-        elif rightChild < self.size and self.heap[rightChild][0] > self.heap[index][0]:
+        if rightChild < self.size and self.heap[rightChild][0] > self.heap[index][0]:
             self.swap(rightChild, index)
             self.heapifyDown(rightChild)
 
